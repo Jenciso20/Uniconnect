@@ -1,0 +1,61 @@
+
+<body>
+    <div class="signup-container">
+        <div class="logo-container">
+            <img src="/logo.webp" alt="Uniconnect logo" class="logo">
+            <span class="logo-text">Uniconnect</span>
+        </div>
+        
+        <h1 class="signup-title">Crear una cuenta</h1>
+        
+        <form class="signup-form" [formGroup]="form" (ngSubmit)="submit()">
+            <div class="form-group">
+                <label for="email" class="form-label">Tu correo</label>
+                <input 
+                    type="email"
+                    name="email" 
+                    id="email" 
+                    class="form-input" 
+                    placeholder="name@company.com"
+                    formControlName="email"
+                >
+                <small *ngIf="form.get('email')?.hasError('required') && form.get('email')?.touched" class="text-red-400">
+                    Este campo es requerido
+                </small>
+                <small *ngIf="form.get('email')?.hasError('email') && form.get('email')?.touched" class="text-red-400">
+                    El correo debe ser válido
+                </small>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Contraseña</label>
+                <input 
+                    type="password" 
+                    name="password"
+                    id="password" 
+                    class="form-input" 
+                    formControlName="password"
+                    placeholder="••••••••"
+                >
+                <small *ngIf="form.get('password')?.hasError('required') && form.get('password')?.touched" class="text-red-400">
+                    Este campo es requerido
+                </small>
+            </div>
+
+            <a href="#" class="forgot-password">¿Te olvidaste tu contraseña?</a>
+
+            <button 
+                type="submit" 
+                class="signup-button"
+                [disabled]="form.invalid"
+            >
+                Sign in
+            </button>
+
+            <p class="login-link">
+                ¿Ya tienes una cuenta? 
+                <a href="/auth/sign-in">Inicia sesión</a>
+            </p>
+        </form>
+    </div>
+</body>
