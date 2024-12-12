@@ -6,7 +6,9 @@ export const routes: Routes = [
         loadChildren: () =>
             import('./auth/features/auth.routes').then((m) => m.authRoutes),
     },
-    // {
-    //     path:'uniconnect'
-    // }
+    {
+        path:'',
+        loadChildren: () =>
+            import('./uniconnect/uniconnect.routes').then((m) => m.uniconnectRoutes),
+    },
 ];

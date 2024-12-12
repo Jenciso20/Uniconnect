@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '@angular/fire/auth';
+import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword , sendPasswordResetEmail} from '@angular/fire/auth';
 
 export interface User {
   email:string
@@ -27,4 +27,8 @@ export class AuthService {
       user.password
     )
   }
+  resetPassword(email: string) {
+    return sendPasswordResetEmail(this._auth, email);
+  }
 }
+

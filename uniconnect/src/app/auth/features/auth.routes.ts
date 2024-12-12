@@ -9,4 +9,8 @@ export const authRoutes: Routes = [
     path: 'sign-up',
     loadComponent: () => import('./sign-up/sign-up.component').then(m => m.SignUpComponent),
   },
+  {
+    path: 'reset-password',
+    loadComponent: () => import('./reset-password/reset-password.component').then(m => m.ResetPasswordComponent),
+  },
 ];

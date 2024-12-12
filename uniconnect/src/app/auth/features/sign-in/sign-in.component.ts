@@ -5,7 +5,7 @@ import { toast } from 'ngx-sonner';
 import { AuthService } from '../../data-access/auth.service';
 import { isRequired, hasEmailError } from '../../utils/validators';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 interface FormSignIn{
   email: FormControl<string  | null>;
@@ -15,7 +15,7 @@ interface FormSignIn{
 @Component({
   selector: 'app-sign-in',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule],
+  imports: [CommonModule,ReactiveFormsModule,RouterLink],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.css'
 })
