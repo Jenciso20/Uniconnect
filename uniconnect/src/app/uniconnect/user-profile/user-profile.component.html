@@ -1,0 +1,15 @@
+<div class="profile-container" *ngIf="profileData; else noData">
+    <h1>Perfil de Usuario</h1>
+    <p><strong>Nombre:</strong> {{ profileData.firstName }}</p>
+    <p><strong>Apellido:</strong> {{ profileData.lastName }}</p>
+    <p><strong>Edad:</strong> {{ profileData.age }}</p>
+    <p><strong>Género:</strong> {{ profileData.gender }}</p>
+  </div>
+  
+  <ng-template #noData>
+    <div class="no-data">
+      <p *ngIf="error">{{ error }}</p>
+      <p *ngIf="!error">No hay datos disponibles. Por favor completa tu perfil.</p>
+    </div>
+  </ng-template>
+  

@@ -1,0 +1,53 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F3F4F6; /* Fondo general suave */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .profile-container {
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #FFFFFF; /* Fondo blanco */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    border: 2px solid #E0E0E0; /* Borde ligero */
+  }
+  
+  .profile-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4F75B5; /* Azul vibrante */
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555; /* Gris oscuro para mejor contraste */
+  }
+  
+  .error-message {
+    color: #E74C3C; /* Rojo vibrante */
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Opcional: Estilo adicional para resaltar elementos */
+  li span {
+    font-weight: bold;
+    color: #4F75B5; /* Azul vibrante para destacar */
+  }
+  
