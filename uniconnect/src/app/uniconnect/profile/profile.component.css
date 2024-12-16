@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F3F4F6; /* Fondo suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    margin: 0;
+  }
+  
+  .profile-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFFFFF; /* Fondo blanco para el formulario */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #4F75B5; /* Azul suave */
+    font-weight: bold;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 16px;
+    color: #6D6D6D; /* Gris medio */
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #F9FAFB; /* Fondo muy suave */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input:focus, select:focus {
+    border-color: #4F75B5; /* Cambio de color a azul cuando está enfocado */
+    box-shadow: 0 0 5px rgba(79, 117, 181, 0.5); /* Resaltado al enfocarse */
+    outline: none;
+  }
+  
+  small {
+    color: #E74C3C; /* Rojo para los mensajes de error */
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4F75B5; /* Azul vibrante */
+    color: #FFFFFF;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #3A5A8C; /* Azul más oscuro al pasar el ratón */
+  }
+  
+  button:disabled {
+    background-color: #D1D1D1; /* Gris cuando el botón está deshabilitado */
+    cursor: not-allowed;
+  }
+  

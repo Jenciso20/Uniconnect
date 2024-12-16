@@ -1,0 +1,67 @@
+<div class="profile-container">
+    <h1>Completa tu perfil</h1>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="form-group">
+        <label for="firstName">Nombre</label>
+        <input
+          id="firstName"
+          type="text"
+          formControlName="firstName"
+          placeholder="Ingresa tu nombre"
+        />
+        <small
+          *ngIf="form.get('firstName')?.hasError('required') && form.get('firstName')?.touched"
+        >
+          Este campo es requerido.
+        </small>
+      </div>
+  
+      <div class="form-group">
+        <label for="lastName">Apellido</label>
+        <input
+          id="lastName"
+          type="text"
+          formControlName="lastName"
+          placeholder="Ingresa tu apellido"
+        />
+        <small
+          *ngIf="form.get('lastName')?.hasError('required') && form.get('lastName')?.touched"
+        >
+          Este campo es requerido.
+        </small>
+      </div>
+  
+      <div class="form-group">
+        <label for="age">Edad</label>
+        <input
+          id="age"
+          type="number"
+          formControlName="age"
+          placeholder="Ingresa tu edad"
+        />
+        <small
+          *ngIf="form.get('age')?.hasError('required') && form.get('age')?.touched"
+        >
+          Este campo es requerido.
+        </small>
+      </div>
+  
+      <div class="form-group">
+        <label for="gender">Género</label>
+        <select id="gender" formControlName="gender">
+          <option value="">Selecciona</option>
+          <option value="male">Masculino</option>
+          <option value="female">Femenino</option>
+          <option value="other">Otro</option>
+        </select>
+        <small
+          *ngIf="form.get('gender')?.hasError('required') && form.get('gender')?.touched"
+        >
+          Este campo es requerido.
+        </small>
+      </div>
+  
+      <button type="submit" [disabled]="form.invalid" >Guardar Perfil</button>
+    </form>
+  </div>
+  
