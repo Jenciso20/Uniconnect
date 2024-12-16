@@ -65,7 +65,7 @@ export class SignUpComponent {
       console.log({ email, password }); // Para verificar que los valores están siendo enviados
       await this._authService.signUp({ email, password }); // Verifica que este método funcione
       toast.success('Usuario creado correctamente');
-      this._router.navigate(['/uniconnect']);
+      this._router.navigate(['/profile']);
     } catch (error) {
       console.error(error); // Log para ver errores específicos
       toast.error('Ocurrió un error');
