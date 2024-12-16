@@ -36,6 +36,7 @@ export class SignInComponent {
     email: this._formBuilder.control('',[
       Validators.required,
       Validators.email,
+      
     ],),
     password: this._formBuilder.control('',[Validators.required],),
   });
@@ -56,4 +57,9 @@ export class SignInComponent {
       toast.error('Ocurrio un error')
     }
   }
+  
 }
+function validadorDominio(arg0: string): import("@angular/forms").ValidatorFn {
+  throw new Error('Function not implemented.');
+}
+

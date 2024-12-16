@@ -1,4 +1,3 @@
-
 <body>
     <div class="signup-container">
         <div class="logo-container">
@@ -9,6 +8,7 @@
         <h1 class="signup-title">Crear una cuenta</h1>
         
         <form class="signup-form" [formGroup]="form" (ngSubmit)="submit()">
+            <!-- Campo Correo -->
             <div class="form-group">
                 <label for="email" class="form-label">Tu correo</label>
                 <input 
@@ -27,6 +27,7 @@
                 </small>
             </div>
 
+            <!-- Campo Contraseña -->
             <div class="form-group">
                 <label for="password" class="form-label">Contraseña</label>
                 <input 
@@ -42,18 +43,38 @@
                 </small>
             </div>
 
+            <!-- Campo Confirmación de Contraseña -->
+            <div class="form-group">
+                <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                <input 
+                    type="password" 
+                    name="confirmPassword"
+                    id="confirmPassword" 
+                    class="form-input" 
+                    formControlName="confirmPassword"
+                    placeholder="••••••••"
+                >
+                <small *ngIf="form.get('confirmPassword')?.hasError('required') && form.get('confirmPassword')?.touched" class="text-red-400">
+                    Este campo es requerido
+                </small>
+                <small *ngIf="form.hasError('passwordsMismatch') && form.get('confirmPassword')?.touched" class="text-red-400">
+                    Las contraseñas no coinciden
+                </small>
+            </div>
 
+            <!-- Botón de Enviar -->
             <button 
                 type="submit" 
                 class="signup-button"
                 [disabled]="form.invalid"
             >
-                Sign in
+                Crear cuenta
             </button>
 
+            <!-- Enlace de Iniciar Sesión -->
             <p class="login-link">
                 ¿Ya tienes una cuenta? 
-                <a routerLink="/auth/sign-in" >Inicia sesión</a>
+                <a routerLink="/auth/sign-in">Inicia sesión</a>
             </p>
         </form>
     </div>
